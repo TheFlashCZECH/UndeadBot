@@ -3,7 +3,7 @@ from discord.ext.commands import Bot as BotBase
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 PREFIX = "+"
-OWNER_IDS = [830548624126771220]
+OWNER_IDS = [] # Actual value saved in private repo
 
 class Bot(BotBase):
 	def __init__(self):
@@ -32,7 +32,7 @@ class Bot(BotBase):
 	async def on_ready(self):
 		if not self.ready:
 			self.ready = True
-			self.guild = self.get_guild(830550091239653417) #change it later, this is only for test server, copy server ID
+			self.guild = self.get_guild() #change it later, this is only for test server, copy server ID, actual value saved in private repo
 			print("BOT READY")
 
 		else:
